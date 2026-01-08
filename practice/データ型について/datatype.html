@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>データ型について</title>
+</head>
+
+<body>
+    <script>
+        /**
+         * データ型とは：変数に入れる値の種類のこと
+         * typeof()：パラメータにセットした値のデータ型を調べることができる
+         */
+        'use strict';
+
+        // 1. 文字列型（string型）：ダブルorシングルクォートで囲った値
+        const str = '文字列';
+        console.log('変数strは' + typeof (str) + '型');
+
+        // 2. 数値型（number型）：数値
+        const num = 24;
+        console.log('変数numは' + typeof (num) + '型');
+
+        // 3. 真偽値型（boolean型）：trueとfalse
+        const flag = true;
+        console.log('変数flagは' + typeof (flag) + '型');
+
+
+        //  === データ型どうしを+演算子で結合した場合 ===
+
+        // 文字列 + 数値 = 文字列（片方が文字列だともう片方も文字列として扱われる）
+        const strnum = str + num;
+        console.log(strnum);  // 文字列24
+        console.log(typeof (strnum));  // string
+
+        // 文字列 + 真偽値 = 文字列（片方が文字列だともう片方も文字列として扱われる）
+        const strflag = str + flag;
+        console.log(strflag);  // 文字列true
+        console.log(typeof (strflag));  // string
+
+        // 数値 + 真偽値 = 数値（片方が数値だともう片方も数値として扱われる）
+        const numflag = num + flag;
+        console.log(numflag);  // 25（trueは 1 なので 24 + 1 = 25）
+        console.log(typeof(numflag));  // number
+
+    </script>
+</body>
+
+</html>

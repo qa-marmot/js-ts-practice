@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScriptの練習</title>
+  </head>
+  <body>
+    <!-- このp要素に★を表示 -->
+    <p id="result"></p>
+    <script>
+      "use strict";
+
+      // プロンプトを利用してデータを変数number代入
+      const number = parseInt(prompt("数値を入力してください"));
+
+      // ★をブラウザ上に表示
+      let i = 1;
+      while (i <= number) {
+        //要素の中のテキストを上書きせず、後ろに★を追加
+        document.getElementById("result").textContent += "★";
+        i += 1;
+      }
+    </script>
+  </body>
+</html>
