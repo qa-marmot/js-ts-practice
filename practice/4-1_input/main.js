@@ -1,7 +1,10 @@
-var form = document.getElementById('form');
-var output = document.getElementById('output');
-form.onsubmit = function (e) {
+'use strict';
+const form = document.getElementById('form');
+const output = document.getElementById('output');
+form.onsubmit = (e) => {
     e.preventDefault();
-    var search = form.word.value;
-    output.textContent = "[".concat(search, "\u306E\u691C\u7D22\u4E2D\uFF0E\uFF0E\uFF0E]");
+    const search = form.word.value;
+    output.textContent = `[${search}の検索中．．．]`;
 };
+export {};
+//# sourceMappingURL=main.js.map

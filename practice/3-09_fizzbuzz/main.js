@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 function fizzbuzz(num) {
     if (num % 3 === 0 && num % 5 === 0) {
         return "fizzbuzz";
@@ -19,4 +18,5 @@ while (i <= 30) {
     console.log(fizzbuzz(i));
     i++;
 }
+export {};
 //# sourceMappingURL=main.js.map

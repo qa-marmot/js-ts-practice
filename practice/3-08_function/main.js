@@ -1,5 +1,4 @@
 'use strict';
-Object.defineProperty(exports, "__esModule", { value: true });
 function total(price) {
     const tax = 0.1;
     return price + price * tax;
@@ -20,4 +19,5 @@ const output3Element = document.getElementById('output3');
 if (output3Element) {
     output3Element.textContent = message3;
 }
+export {};
 //# sourceMappingURL=main.js.map

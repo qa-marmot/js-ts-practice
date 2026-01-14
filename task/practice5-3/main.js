@@ -1,13 +1,15 @@
 "use strict";
-var favorites = {
+const favorites = {
     food: "カレーライス",
     color: "青",
     number: 7,
     sports: "baseball",
 };
-for (var i in favorites) {
+for (let i in favorites) {
     if (i === "color" || i === "number") {
-        console.log("".concat(favorites[i]));
+        console.log(`${favorites[i]}`);
     }
     else { }
 }
+export {};
+//# sourceMappingURL=main.js.map

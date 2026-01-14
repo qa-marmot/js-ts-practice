@@ -1,45 +1,35 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    // File Layout
-    // "rootDir": "./src",
-    // "outDir": "./dist",
+    // 1. 変数宣言(const/let)を保持し、モダンなJSを出力する
+    "target": "es2020",
 
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
+    // 2. ブラウザで解釈可能な形式(exportsを使わない)にする
+    "module": "esnext",
+    "moduleResolution": "node",
+
+    // 3. ブラウザの機能（document や window）をTSが認識できるようにする
+    "lib": ["es2020", "dom"],
     "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
 
-    // Other Outputs
+    // 出力設定
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
 
-    // Stricter Typechecking Options
+    // チェック設定（現状の設定を維持）
+    "strict": false,
     "strictNullChecks": false,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": false,
 
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
-
-    // Recommended Options
-    "strict": false,
+    // 推奨オプション
     "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": false, // ここをfalseにするとimport/exportが扱いやすくなります
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   }
 }

@@ -1,3 +1,5 @@
+'use strict'
+
 const form = document.getElementById('form') as HTMLFormElement;
 const output = document.getElementById('output')!;
 
