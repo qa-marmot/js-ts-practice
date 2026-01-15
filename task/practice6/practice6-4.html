@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    "use strict";
+
+    let tel = []
+
+    for (let i = 1; i <= 3; i++) {
+      let ask = prompt()
+      tel.push(ask)
+    }
+    console.log(tel)
+    console.log(`入力された電話番号は ${tel.join('-')}です。`)
+  </script>
+</body>
+
+</html>

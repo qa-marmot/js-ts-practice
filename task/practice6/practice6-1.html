@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    "use strict";
+
+    const time = new Date();
+    const hour = time.getHours();
+    const min = time.getMinutes();
+    const sec = time.getSeconds();
+
+    console.log(`現在の時間は${hour}時${min}分${sec}秒です。`);
+
+    let category = "";
+
+    if (hour >= 6 && hour <= 9) {
+      category = "朝";
+    } else if (hour <= 14) {
+      category = "昼";
+    } else if (hour <= 17) {
+      category = "夕";
+    } else if (hour <= 23) {
+      category = "夜";
+    } else {
+      category = "深夜";
+    }
+
+    console.log(`${hour}時は${category}です。`);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <form id="form">
+      <input type="submit" value="クリック">
+    </form>
+  </div>
+  <script>
+    document.getElementById('form').onsubmit = (e) => {
+      e.preventDefault();
+      let ask = confirm('IIP金沢のホームページに移動しますか？')
+      if(ask === true){
+        location.href = 'https://iip-kanazawa.co.jp/'
+      } else {
+        location.href = './practice7-1.html'
+      }
+    }
+  </script>
+</body>
+
+</html>

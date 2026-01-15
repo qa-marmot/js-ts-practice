@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      position: relative;
+    }
+
+    img {
+      width: 20%;
+    }
+
+    .modal-n img {
+      width: 100%;
+    }
+
+    .modal-w {
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+    }
+
+    .modal-close {
+      width: 50%;
+      margin: 0 auto;
+      font-size: 2rem;
+      font-weight: 600;
+      color: rgb(255, 255, 255);
+      padding: 0.5rem;
+      text-align: right;
+    }
+
+    .modal-n {
+      width: 50%;
+      background-color: rgb(255, 255, 255);
+      margin: 0 auto;
+      padding: 2rem;
+      position: absolute;
+      top: 53%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .d_block {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="raccos.jpg" alt="ラッコズ">
+  <div class="modal-w">
+    <div class="modal-close">×</div>
+    <div class="modal-n">
+    </div>
+  </div>
+  <script>
+    const mainImage = document.querySelector('img');          // クリックする画像
+    const modalWindow = document.querySelector('.modal-w');   // モーダル
+    const modalInner = document.querySelector('.modal-n');    // 画像を入れる場所
+
+    mainImage.addEventListener('click', () => {
+      modalInner.innerHTML = '<img src="raccos.jpg" alt="ラッコズ">';
+      modalWindow.classList.add('d_block');
+    });
+
+    modalWindow.addEventListener('click', () => {
+      modalWindow.classList.remove('d_block');
+    });
+  </script>
+</body>
+
+</html>

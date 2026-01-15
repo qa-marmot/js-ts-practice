@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    table,
+    tr,
+    td {
+      border-bottom: 2px dotted #9c9c9c;
+      border-collapse: collapse;
+    }
+
+    td:nth-of-type(2) {
+      padding-left: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <tbody id="tb"></tbody>
+  </table>
+  <script>
+    "use strict";
+
+    const data = {
+      r0: ['2020-10-14', '開校式'],
+      r1: ['2020-10-16', 'HTML5&CSS3スタート'],
+      r2: ['2020-11-24', 'JavaScriptスタート'],
+    }
+
+    for (let i of Object.keys(data)) {
+      let tr = `<tr id='${i}'></tr>`
+      let day = `<td>${data[i][0]}</td>`
+      let content = `<td>${data[i][1]}</td>`
+      document.getElementById('tb').insertAdjacentHTML('beforeEnd', tr);
+      document.getElementById(i).insertAdjacentHTML('beforeEnd', day)
+      document.getElementById(i).insertAdjacentHTML('beforeEnd', content)
+    }
+
+  </script>
+</body>
+
+</html>

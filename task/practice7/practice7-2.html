@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <form id="form">
+      <input type="submit" value="yahoo">
+      <input type="submit" value="google">
+      <input type="submit" value="amazon">
+    </form>
+  </div>
+  <script>
+    document.getElementById('form').onsubmit = (e) => {
+      e.preventDefault(); 
+
+      const buttonValue = e.submitter.value;
+
+      if (buttonValue === 'yahoo') {
+        location.href = 'https://www.yahoo.co.jp';
+      } else if (buttonValue === 'google') {
+        location.href = 'https://www.google.co.jp';
+      } else if (buttonValue === 'amazon') {
+        location.href = 'https://www.amazon.co.jp';
+      }
+    }
+  </script>
+</body>
+
+</html>

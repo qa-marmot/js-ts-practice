@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <form id="form">
+      <button name="btn" value="btn1">ボタン1</button>
+      <button name="btn" value="btn2">ボタン2</button>
+    </form>
+  </div>
+  <div id="image">
+
+  </div>
+  <script>
+    document.getElementById('form').onsubmit = (e) => {
+      e.preventDefault();
+      const buttonValue = e.submitter.value;
+
+      if (buttonValue === 'btn1') {
+        document.getElementById('image').innerHTML = "<img src='raccos.jpg'>"
+      } else if (buttonValue === 'btn2') {
+        document.getElementById('image').innerHTML = "<img src='chaho.png'>"
+      }
+
+    }
+  </script>
+</body>
+
+</html>
